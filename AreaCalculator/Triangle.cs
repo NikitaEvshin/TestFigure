@@ -34,11 +34,11 @@ namespace AreaCalculator
 
         public bool CheckIsRectangular()
         {
-            if (A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A)
+            if (A <= 0 || B <= 0 || C <= 0)
             {
-                return true;
+                throw new Exception("Сторона треугольника не может быть меньше 0");
             }
-            return false;
+            return A * A == B * B + C * C || B * B == A * A + C * C || C * C == B * B + A * A;
         }
     }
 }

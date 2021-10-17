@@ -39,5 +39,11 @@ namespace AreaCalculatorTests
             Triangle triangle = new Triangle(3, 2, -1);
             Assert.Throws<Exception>(() => Calculator.CalculateArea(triangle));
         }
+        [Fact]
+        public void CheckTriangleIsRectangular()
+        {
+            Triangle triangle = new Triangle(4, 3, -5);
+            Assert.Throws<Exception>(() => triangle.CheckIsRectangular());
+        }
     }
 }
